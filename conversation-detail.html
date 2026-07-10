@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Conversation</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+<header class="page-header">
+
+<a href="conversation.html" class="back">
+<i class="fa-solid fa-arrow-left"></i>
+</a>
+
+<h2>Conversation</h2>
+
+</header>
+
+<main class="conversation-detail">
+
+<div class="detail-card">
+
+<h1 id="judul">Loading...</h1>
+
+<p id="deskripsi"></p>
+
+</div>
+
+<div id="dialogList"></div>
+
+</main>
+
+</div>
+
+<!-- ========================= -->
+<!-- Data Conversation -->
+<!-- ========================= -->
+
+<script src="data/conversation/greeting.js"></script>
+<script src="data/conversation/introduction.js"></script>
+<script src="data/conversation/school.js"></script>
+<script src="data/conversation/friend.js"></script>
+<script src="data/conversation/restaurant.js"></script>
+<script src="data/conversation/shopping.js"></script>
+<script src="data/conversation/transportation.js"></script>
+<script src="data/conversation/direction.js"></script>
+<script src="data/conversation/home.js"></script>
+<script src="data/conversation/weather.js"></script>
+<script src="data/conversation/hospital.js"></script>
+<script src="data/conversation/emergency.js"></script>
+
+<script>
+
+const conversations=[
+
+greeting,
+introduction,
+school,
+friend,
+restaurant,
+shopping,
+transportation,
+direction,
+home,
+weather,
+hospital,
+emergency
+
+];
+
+const params=new URLSearchParams(window.location.search);
+
+const id=params.get("id");
+
+const data=conversations.find(item=>item.id===id);
+
+if(data){
+
+document.getElementById("judul").textContent=data.judul;
+
+document.getElementById("deskripsi").textContent=data.deskripsi || "";
+
+const dialog=document.getElementById("dialogList");
+
+data.dialog.forEach(item=>{
+
+dialog.innerHTML+=`
+
+<div class="example-card">
+
+<button
+class="audio-btn"
+onclick="speakJapanese('${item.audio || item.jp}')">
+
+<i class="fa-solid fa-volume-high"></i>
+
+</button>
+
+<h3>${item.jp}</h3>
+
+<strong>${item.romaji}</strong>
+
+<p>${item.arti}</p>
+
+</div>
+
+`;
+
+});
+
+}else{
+
+document.querySelector(".conversation-detail").innerHTML=`
+
+<h2 style="text-align:center;margin-top:40px;">
+Conversation tidak ditemukan.
+</h2>
+
+`;
+
+}
+
+function speakJapanese(text){
+
+speechSynthesis.cancel();
+
+const utterance=new SpeechSynthesisUtterance(text);
+
+utterance.lang="ja-JP";
+
+utterance.rate=0.85;
+
+utterance.pitch=1;
+
+const voices=speechSynthesis.getVoices();
+
+const voice=voices.find(v=>v.lang==="ja-JP");
+
+if(voice){
+
+utterance.voice=voice;
+
+}
+
+speechSynthesis.speak(utterance);
+
+}
+
+speechSynthesis.onvoiceschanged=()=>{
+
+speechSynthesis.getVoices();
+
+};
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vocabulary</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+<header class="page-header">
+
+<a href="vocabulary.html" class="back">
+<i class="fa-solid fa-arrow-left"></i>
+</a>
+
+<h2 id="judulKategori">Vocabulary</h2>
+
+</header>
+
+<main>
+
+<div id="vocabularyList"></div>
+
+</main>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const kategori = params.get("kategori");
+
+// Daftar file kategori
+const files = {
+    angka: "data/vocabulary/angka.js",
+    warna: "data/vocabulary/warna.js",
+    keluarga: "data/vocabulary/keluarga.js",
+    makanan: "data/vocabulary/makanan.js",
+    minuman: "data/vocabulary/minuman.js",
+    hewan: "data/vocabulary/hewan.js",
+    buah: "data/vocabulary/buah.js",
+    sayuran: "data/vocabulary/sayuran.js",
+    sekolah: "data/vocabulary/sekolah.js",
+    transportasi: "data/vocabulary/transportasi.js",
+    waktu: "data/vocabulary/waktu.js",
+    cuaca: "data/vocabulary/cuaca.js",
+    tubuh: "data/vocabulary/tubuh.js",
+    rumah: "data/vocabulary/rumah.js",
+    pakaian: "data/vocabulary/pakaian.js",
+    pekerjaan: "data/vocabulary/pekerjaan.js"
+};
+
+if(files[kategori]){
+
+    const script=document.createElement("script");
+
+    script.src=files[kategori];
+
+    script.onload=function(){
+
+        let data;
+
+        switch(kategori){
+
+            case "angka": data=angka; break;
+            case "warna": data=warna; break;
+            case "keluarga": data=keluarga; break;
+            case "makanan": data=makanan; break;
+            case "minuman": data=minuman; break;
+            case "hewan": data=hewan; break;
+            case "buah": data=buah; break;
+            case "sayuran": data=sayuran; break;
+            case "sekolah": data=sekolah; break;
+            case "transportasi": data=transportasi; break;
+            case "waktu": data=waktu; break;
+            case "cuaca": data=cuaca; break;
+            case "tubuh": data=tubuh; break;
+            case "rumah": data=rumah; break;
+            case "pakaian": data=pakaian; break;
+            case "pekerjaan": data=pekerjaan; break;
+        }
+
+        tampilkanData(data);
+
+    }
+
+    document.body.appendChild(script);
+
+}else{
+
+document.getElementById("vocabularyList").innerHTML="<h3 style='text-align:center'>Kategori tidak ditemukan</h3>";
+
+}
+
+function tampilkanData(data){
+
+document.getElementById("judulKategori").innerHTML=data.nama;
+
+const list=document.getElementById("vocabularyList");
+
+list.innerHTML="";
+
+data.data.forEach(item=>{
+
+list.innerHTML+=`
+
+<div class="word-card">
+
+<div class="jp">${item.jp}</div>
+
+<div class="romaji">${item.romaji}</div>
+
+<div class="arti">${item.arti}</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

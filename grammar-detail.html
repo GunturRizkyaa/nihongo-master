@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detail Grammar</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+<header class="page-header">
+
+<a href="grammar.html" class="back">
+<i class="fa-solid fa-arrow-left"></i>
+</a>
+
+<h2>Grammar JLPT N5</h2>
+
+</header>
+
+<main class="grammar-detail">
+
+<div class="detail-card">
+
+<h1 id="judul">Loading...</h1>
+
+<p id="arti"></p>
+
+</div>
+
+<div class="info-card">
+
+<h3>📖 Rumus</h3>
+
+<p id="rumus"></p>
+
+</div>
+
+<div class="info-card">
+
+<h3>💡 Penjelasan</h3>
+
+<p id="penjelasan"></p>
+
+</div>
+
+<div class="info-card">
+
+<h3>📚 Contoh Kalimat</h3>
+
+<div id="contohList"></div>
+
+</div>
+
+<div class="info-card">
+
+<h3>⚠️ Catatan</h3>
+
+<ul id="catatanList"></ul>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="data/grammar/lesson1.js"></script>
+<script src="data/grammar/lesson2.js"></script>
+<script src="data/grammar/lesson3.js"></script>
+<script src="data/grammar/lesson4.js"></script>
+<script src="data/grammar/lesson5.js"></script>
+<script src="data/grammar/lesson6.js"></script>
+<script src="data/grammar/lesson7.js"></script>
+<script src="data/grammar/lesson8.js"></script>
+
+<script>
+
+const lessons=[
+lesson1,
+lesson2,
+lesson3,
+lesson4,
+lesson5,
+lesson6,
+lesson7,
+lesson8
+];
+
+const params=new URLSearchParams(window.location.search);
+
+const id=params.get("id");
+
+const data=lessons.find(item=>item.id===id);
+
+if(data){
+
+document.getElementById("judul").textContent=data.judul;
+
+document.getElementById("arti").textContent=data.arti;
+
+document.getElementById("rumus").textContent=data.rumus;
+
+document.getElementById("penjelasan").textContent=data.penjelasan || "";
+
+const contoh=document.getElementById("contohList");
+
+data.contoh.forEach(item=>{
+
+contoh.innerHTML+=`
+
+<div class="example-card">
+
+<button class="audio-btn"
+onclick="speakJapanese('${item.audio || item.jp}')">
+
+<i class="fa-solid fa-volume-high"></i>
+
+</button>
+
+<h3>${item.jp}</h3>
+
+<strong>${item.romaji}</strong>
+
+<p>${item.arti}</p>
+
+</div>
+
+`;
+
+});
+
+const catatan=document.getElementById("catatanList");
+
+if(data.catatan){
+
+if(Array.isArray(data.catatan)){
+
+data.catatan.forEach(item=>{
+
+catatan.innerHTML+=`<li>${item}</li>`;
+
+});
+
+}else{
+
+catatan.innerHTML=`<li>${data.catatan}</li>`;
+
+}
+
+}
+
+}else{
+
+document.querySelector(".grammar-detail").innerHTML=`
+
+<h2>Materi tidak ditemukan.</h2>
+
+`;
+
+}
+
+// =========================
+// AUDIO BAHASA JEPANG
+// =========================
+
+function speakJapanese(text){
+
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    utterance.lang = "ja-JP";
+    utterance.rate = 0.8;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utterance);
+
+}
+
+</script>
+
+</body>
+
+</html>

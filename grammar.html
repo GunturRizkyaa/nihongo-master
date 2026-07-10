@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grammar JLPT N5</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- Header -->
+
+    <header class="page-header">
+
+        <a href="index.html" class="back">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Grammar JLPT N5</h2>
+
+    </header>
+
+    <!-- Deskripsi -->
+
+    <section class="grammar-header">
+
+        <h3>📚 Tata Bahasa Dasar Jepang</h3>
+
+        <p>
+            Pelajari grammar JLPT N5 mulai dari partikel, kata kerja,
+            kata sifat, hingga pola kalimat dasar.
+        </p>
+
+    </section>
+
+    <!-- List Grammar -->
+
+    <main id="grammarList">
+
+        <!-- Diisi otomatis oleh JavaScript -->
+
+    </main>
+
+</div>
+
+<script src="data/grammar/grammar.js"></script>
+
+<script>
+
+const list = document.getElementById("grammarList");
+
+grammar.forEach(item=>{
+
+list.innerHTML += `
+
+<a href="grammar-detail.html?id=${item.id}" class="menu-link">
+
+<div class="card">
+
+<i class="fa-solid fa-book"></i>
+
+<div>
+
+<h3>${item.judul}</h3>
+
+<p>${item.deskripsi}</p>
+
+</div>
+
+<i class="fa-solid fa-chevron-right arrow"></i>
+
+</div>
+
+</a>
+
+`;
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+.profile-page{
+padding:20px;
+}
+
+.profile-card{
+
+background:linear-gradient(135deg,#4CAF50,#2E7D32);
+
+border-radius:25px;
+
+padding:25px;
+
+color:white;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.avatar{
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+margin:auto;
+
+overflow:hidden;
+
+border:5px solid white;
+
+cursor:pointer;
+
+background:white;
+
+}
+
+.avatar img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+.name{
+
+font-size:24px;
+
+font-weight:bold;
+
+margin-top:15px;
+
+}
+
+.level{
+
+margin-top:5px;
+
+opacity:.9;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+margin-top:25px;
+
+}
+
+.stat{
+
+background:white;
+
+padding:20px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.stat h2{
+
+margin:0;
+
+color:#4CAF50;
+
+}
+
+.stat p{
+
+margin-top:8px;
+
+font-size:14px;
+
+color:#666;
+
+}
+
+.menu{
+
+margin-top:25px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.menu a{
+
+background:white;
+
+padding:18px;
+
+border-radius:15px;
+
+text-decoration:none;
+
+color:#333;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+box-shadow:0 5px 10px rgba(0,0,0,.08);
+
+}
+
+input[type=file]{
+
+display:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="phone">
+
+<header class="page-header">
+
+<a href="index.html" class="back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+<h2>Profil Saya</h2>
+
+</header>
+
+<div class="profile-page">
+
+<div class="profile-card">
+
+<label for="uploadPhoto">
+
+<div class="avatar">
+
+<img id="profileImage"
+src="https://i.imgur.com/Qq6Y6LQ.png">
+
+</div>
+
+</label>
+
+<input
+type="file"
+id="uploadPhoto"
+accept="image/*">
+
+<div class="name">Nihongo Learner</div>
+
+<div class="level">
+
+JLPT N5 Student 🇯🇵
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2 id="highscore">0</h2>
+
+<p>High Score</p>
+
+</div>
+
+<div class="stat">
+
+<h2 id="quizcount">0</h2>
+
+<p>Total Quiz</p>
+
+</div>
+
+<div class="stat">
+
+<h2>20%</h2>
+
+<p>Progress</p>
+
+</div>
+
+<div class="stat">
+
+<h2>🔥 0</h2>
+
+<p>Streak</p>
+
+</div>
+
+</div>
+
+<div class="menu">
+
+<a href="#">
+
+<span>
+
+🏆 Achievement
+
+</span>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+<a href="#">
+
+<span>
+
+📊 Statistik Belajar
+
+</span>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+<a href="#">
+
+<span>
+
+⚙ Pengaturan
+
+</span>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+<a href="#">
+
+<span>
+
+ℹ Tentang Aplikasi
+
+</span>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("highscore").innerHTML=
+
+localStorage.getItem("highscore")||0;
+
+document.getElementById("quizcount").innerHTML=
+
+localStorage.getItem("quizcount")||0;
+
+const image=document.getElementById("profileImage");
+
+const upload=document.getElementById("uploadPhoto");
+
+const saved=localStorage.getItem("profilePhoto");
+
+if(saved){
+
+image.src=saved;
+
+}
+
+upload.addEventListener("change",function(){
+
+const file=this.files[0];
+
+if(!file) return;
+
+const reader=new FileReader();
+
+reader.onload=function(e){
+
+image.src=e.target.result;
+
+localStorage.setItem(
+
+"profilePhoto",
+
+e.target.result
+
+);
+
+}
+
+reader.readAsDataURL(file);
+
+});
+
+</script>
+
+</body>
+
+</html>

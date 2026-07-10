@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Belajar Katakana</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- HEADER -->
+    <header class="page-header">
+
+        <a href="index.html" class="back">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Katakana</h2>
+
+    </header>
+
+    <!-- KONTEN -->
+    <main>
+
+        <h3 class="section-title">
+            46 Huruf Katakana
+        </h3>
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchKatakana"
+                class="search"
+                placeholder="Cari Katakana..."
+                onkeyup="searchKatakana()">
+
+        </div>
+
+        <!-- Grid Huruf -->
+        <div id="katakanaGrid" class="hiragana-grid">
+
+            <!-- Dibuat otomatis oleh JavaScript -->
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- DATA -->
+<script src="data/katakana.js"></script>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+
+</html>
