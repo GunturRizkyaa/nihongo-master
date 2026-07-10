@@ -1,0 +1,62 @@
+const waktu = {
+
+id:"waktu",
+
+nama:"Waktu",
+
+data:[
+
+{jp:"じかん",romaji:"Jikan",arti:"Waktu"},
+{jp:"とき",romaji:"Toki",arti:"Saat"},
+{jp:"いま",romaji:"Ima",arti:"Sekarang"},
+{jp:"きょう",romaji:"Kyou",arti:"Hari Ini"},
+{jp:"あした",romaji:"Ashita",arti:"Besok"},
+{jp:"あさって",romaji:"Asatte",arti:"Lusa"},
+{jp:"きのう",romaji:"Kinou",arti:"Kemarin"},
+{jp:"おととい",romaji:"Ototoi",arti:"Kemarin Lusa"},
+{jp:"あさ",romaji:"Asa",arti:"Pagi"},
+{jp:"ひる",romaji:"Hiru",arti:"Siang"},
+{jp:"ゆうがた",romaji:"Yuugata",arti:"Sore"},
+{jp:"ばん",romaji:"Ban",arti:"Malam"},
+{jp:"よる",romaji:"Yoru",arti:"Malam Hari"},
+{jp:"まよなか",romaji:"Mayonaka",arti:"Tengah Malam"},
+{jp:"ごぜん",romaji:"Gozen",arti:"AM (Sebelum Tengah Hari)"},
+{jp:"ごご",romaji:"Gogo",arti:"PM (Sesudah Tengah Hari)"},
+{jp:"いちじ",romaji:"Ichiji",arti:"Jam Satu"},
+{jp:"にじ",romaji:"Niji",arti:"Jam Dua"},
+{jp:"さんじ",romaji:"Sanji",arti:"Jam Tiga"},
+{jp:"よじ",romaji:"Yoji",arti:"Jam Empat"},
+{jp:"ごじ",romaji:"Goji",arti:"Jam Lima"},
+{jp:"ろくじ",romaji:"Rokuji",arti:"Jam Enam"},
+{jp:"しちじ",romaji:"Shichiji",arti:"Jam Tujuh"},
+{jp:"はちじ",romaji:"Hachiji",arti:"Jam Delapan"},
+{jp:"くじ",romaji:"Kuji",arti:"Jam Sembilan"},
+{jp:"じゅうじ",romaji:"Juuji",arti:"Jam Sepuluh"},
+{jp:"じゅういちじ",romaji:"Juuichiji",arti:"Jam Sebelas"},
+{jp:"じゅうにじ",romaji:"Juuniji",arti:"Jam Dua Belas"},
+{jp:"いっぷん",romaji:"Ippun",arti:"Satu Menit"},
+{jp:"ごふん",romaji:"Gofun",arti:"Lima Menit"},
+{jp:"じゅっぷん",romaji:"Juppun",arti:"Sepuluh Menit"},
+{jp:"びょう",romaji:"Byou",arti:"Detik"},
+{jp:"ひ",romaji:"Hi",arti:"Hari"},
+{jp:"しゅう",romaji:"Shuu",arti:"Minggu"},
+{jp:"げつ",romaji:"Getsu",arti:"Bulan"},
+{jp:"とし",romaji:"Toshi",arti:"Tahun"},
+{jp:"まいにち",romaji:"Mainichi",arti:"Setiap Hari"},
+{jp:"まいしゅう",romaji:"Maishuu",arti:"Setiap Minggu"},
+{jp:"まいつき",romaji:"Maitsuki",arti:"Setiap Bulan"},
+{jp:"まいとし",romaji:"Maitoshi",arti:"Setiap Tahun"},
+{jp:"こんしゅう",romaji:"Konshuu",arti:"Minggu Ini"},
+{jp:"らいしゅう",romaji:"Raishuu",arti:"Minggu Depan"},
+{jp:"せんしゅう",romaji:"Senshuu",arti:"Minggu Lalu"},
+{jp:"こんげつ",romaji:"Kongetsu",arti:"Bulan Ini"},
+{jp:"らいげつ",romaji:"Raigetsu",arti:"Bulan Depan"},
+{jp:"せんげつ",romaji:"Sengetsu",arti:"Bulan Lalu"},
+{jp:"ことし",romaji:"Kotoshi",arti:"Tahun Ini"},
+{jp:"らいねん",romaji:"Rainen",arti:"Tahun Depan"},
+{jp:"きょねん",romaji:"Kyonen",arti:"Tahun Lalu"},
+{jp:"しょうらい",romaji:"Shourai",arti:"Masa Depan"}
+
+]
+
+};

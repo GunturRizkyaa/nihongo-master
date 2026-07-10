@@ -1,0 +1,62 @@
+const buah = {
+
+id: "buah",
+
+nama: "Buah",
+
+data: [
+
+{jp:"くだもの",romaji:"Kudamono",arti:"Buah"},
+{jp:"りんご",romaji:"Ringo",arti:"Apel"},
+{jp:"みかん",romaji:"Mikan",arti:"Jeruk Mandarin"},
+{jp:"オレンジ",romaji:"Orenji",arti:"Jeruk"},
+{jp:"バナナ",romaji:"Banana",arti:"Pisang"},
+{jp:"ぶどう",romaji:"Budou",arti:"Anggur"},
+{jp:"いちご",romaji:"Ichigo",arti:"Stroberi"},
+{jp:"すいか",romaji:"Suika",arti:"Semangka"},
+{jp:"メロン",romaji:"Meron",arti:"Melon"},
+{jp:"もも",romaji:"Momo",arti:"Persik"},
+{jp:"なし",romaji:"Nashi",arti:"Pir Jepang"},
+{jp:"パイナップル",romaji:"Painappuru",arti:"Nanas"},
+{jp:"マンゴー",romaji:"Mangoo",arti:"Mangga"},
+{jp:"レモン",romaji:"Remon",arti:"Lemon"},
+{jp:"ライム",romaji:"Raimu",arti:"Jeruk Nipis"},
+{jp:"さくらんぼ",romaji:"Sakuranbo",arti:"Ceri"},
+{jp:"キウイ",romaji:"Kiui",arti:"Kiwi"},
+{jp:"アボカド",romaji:"Abokado",arti:"Alpukat"},
+{jp:"ココナッツ",romaji:"Kokonattsu",arti:"Kelapa"},
+{jp:"グレープフルーツ",romaji:"Gureepufuruutsu",arti:"Jeruk Bali"},
+{jp:"ざくろ",romaji:"Zakuro",arti:"Delima"},
+{jp:"かき",romaji:"Kaki",arti:"Kesemek"},
+{jp:"いちじく",romaji:"Ichijiku",arti:"Buah Ara"},
+{jp:"ドラゴンフルーツ",romaji:"Doragon Furuutsu",arti:"Buah Naga"},
+{jp:"パパイヤ",romaji:"Papaiya",arti:"Pepaya"},
+{jp:"ドリアン",romaji:"Dorian",arti:"Durian"},
+{jp:"ランブータン",romaji:"Ranbuutan",arti:"Rambutan"},
+{jp:"マンゴスチン",romaji:"Mangosuchin",arti:"Manggis"},
+{jp:"ライチ",romaji:"Raichi",arti:"Leci"},
+{jp:"スターフルーツ",romaji:"Sutaafuruutsu",arti:"Belimbing"},
+{jp:"グアバ",romaji:"Guaba",arti:"Jambu Biji"},
+{jp:"ジャックフルーツ",romaji:"Jakkufuruutsu",arti:"Nangka"},
+{jp:"サワーソップ",romaji:"Sawaasoppu",arti:"Sirsak"},
+{jp:"パッションフルーツ",romaji:"Passhon Furuutsu",arti:"Markisa"},
+{jp:"ブルーベリー",romaji:"Buruuberii",arti:"Blueberry"},
+{jp:"ラズベリー",romaji:"Razuberii",arti:"Raspberry"},
+{jp:"ブラックベリー",romaji:"Burakkuberii",arti:"Blackberry"},
+{jp:"クランベリー",romaji:"Kuranberii",arti:"Cranberry"},
+{jp:"プラム",romaji:"Puramu",arti:"Plum"},
+{jp:"アプリコット",romaji:"Apurikotto",arti:"Aprikot"},
+{jp:"ぶんたん",romaji:"Buntan",arti:"Pomelo"},
+{jp:"ゆず",romaji:"Yuzu",arti:"Yuzu"},
+{jp:"かぼす",romaji:"Kabosu",arti:"Kabosu"},
+{jp:"すだち",romaji:"Sudachi",arti:"Sudachi"},
+{jp:"あんず",romaji:"Anzu",arti:"Aprikot Jepang"},
+{jp:"びわ",romaji:"Biwa",arti:"Loquat"},
+{jp:"やまもも",romaji:"Yamamomo",arti:"Bayberry Jepang"},
+{jp:"オリーブ",romaji:"Oriibu",arti:"Zaitun"},
+{jp:"デーツ",romaji:"Deetsu",arti:"Kurma"},
+{jp:"ぶどうかん",romaji:"Budoukan",arti:"Anggur Muscat"}
+
+]
+
+};

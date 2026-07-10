@@ -1,0 +1,62 @@
+const transportasi = {
+
+id: "transportasi",
+
+nama: "Transportasi",
+
+data: [
+
+{jp:"こうつう",romaji:"Koutsuu",arti:"Transportasi"},
+{jp:"のりもの",romaji:"Norimono",arti:"Kendaraan"},
+{jp:"くるま",romaji:"Kuruma",arti:"Mobil"},
+{jp:"じどうしゃ",romaji:"Jidousha",arti:"Mobil"},
+{jp:"タクシー",romaji:"Takushii",arti:"Taksi"},
+{jp:"バス",romaji:"Basu",arti:"Bus"},
+{jp:"でんしゃ",romaji:"Densha",arti:"Kereta Listrik"},
+{jp:"しんかんせん",romaji:"Shinkansen",arti:"Kereta Cepat"},
+{jp:"ちかてつ",romaji:"Chikatetsu",arti:"Kereta Bawah Tanah"},
+{jp:"きしゃ",romaji:"Kisha",arti:"Kereta Api"},
+{jp:"えき",romaji:"Eki",arti:"Stasiun"},
+{jp:"ホーム",romaji:"Hoomu",arti:"Peron"},
+{jp:"きっぷ",romaji:"Kippu",arti:"Tiket"},
+{jp:"じてんしゃ",romaji:"Jitensha",arti:"Sepeda"},
+{jp:"オートバイ",romaji:"Ootobai",arti:"Sepeda Motor"},
+{jp:"バイク",romaji:"Baiku",arti:"Motor"},
+{jp:"ヘルメット",romaji:"Herumetto",arti:"Helm"},
+{jp:"ひこうき",romaji:"Hikouki",arti:"Pesawat Terbang"},
+{jp:"くうこう",romaji:"Kuukou",arti:"Bandara"},
+{jp:"パイロット",romaji:"Pairotto",arti:"Pilot"},
+{jp:"ふね",romaji:"Fune",arti:"Kapal"},
+{jp:"ボート",romaji:"Booto",arti:"Perahu"},
+{jp:"フェリー",romaji:"Ferii",arti:"Feri"},
+{jp:"みなと",romaji:"Minato",arti:"Pelabuhan"},
+{jp:"トラック",romaji:"Torakku",arti:"Truk"},
+{jp:"しょうぼうしゃ",romaji:"Shoubousha",arti:"Mobil Pemadam Kebakaran"},
+{jp:"きゅうきゅうしゃ",romaji:"Kyuukyuusha",arti:"Ambulans"},
+{jp:"パトカー",romaji:"Patokaa",arti:"Mobil Polisi"},
+{jp:"じどうしゃどう",romaji:"Jidoushadou",arti:"Jalan Tol"},
+{jp:"みち",romaji:"Michi",arti:"Jalan"},
+{jp:"しんごう",romaji:"Shingou",arti:"Lampu Lalu Lintas"},
+{jp:"こうさてん",romaji:"Kousaten",arti:"Persimpangan"},
+{jp:"おうだんほどう",romaji:"Oudan Hodou",arti:"Zebra Cross"},
+{jp:"ばすてい",romaji:"Basutei",arti:"Halte Bus"},
+{jp:"ちゅうしゃじょう",romaji:"Chuushajou",arti:"Tempat Parkir"},
+{jp:"うんてん",romaji:"Unten",arti:"Mengemudi"},
+{jp:"うんてんしゅ",romaji:"Untenshu",arti:"Pengemudi"},
+{jp:"じょしゅせき",romaji:"Joshuseki",arti:"Kursi Penumpang"},
+{jp:"せき",romaji:"Seki",arti:"Tempat Duduk"},
+{jp:"にもつ",romaji:"Nimotsu",arti:"Bagasi"},
+{jp:"スーツケース",romaji:"Suutsukeesu",arti:"Koper"},
+{jp:"リュックサック",romaji:"Ryukkusakku",arti:"Ransel"},
+{jp:"きゃく",romaji:"Kyaku",arti:"Penumpang"},
+{jp:"じこ",romaji:"Jiko",arti:"Kecelakaan"},
+{jp:"ガソリン",romaji:"Gasorin",arti:"Bensin"},
+{jp:"ガソリンスタンド",romaji:"Gasorin Sutando",arti:"SPBU"},
+{jp:"タイヤ",romaji:"Taiya",arti:"Ban"},
+{jp:"ハンドル",romaji:"Handoru",arti:"Setir"},
+{jp:"ブレーキ",romaji:"Bureeki",arti:"Rem"},
+{jp:"アクセル",romaji:"Akuseru",arti:"Pedal Gas"}
+
+]
+
+};

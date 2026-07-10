@@ -1,0 +1,62 @@
+const minuman = {
+
+id: "minuman",
+
+nama: "Minuman",
+
+data: [
+
+{jp:"のみもの",romaji:"Nomimono",arti:"Minuman"},
+{jp:"みず",romaji:"Mizu",arti:"Air Putih"},
+{jp:"おゆ",romaji:"Oyu",arti:"Air Panas"},
+{jp:"れいすい",romaji:"Reisui",arti:"Air Dingin"},
+{jp:"おちゃ",romaji:"Ocha",arti:"Teh Hijau"},
+{jp:"こうちゃ",romaji:"Koucha",arti:"Teh Hitam"},
+{jp:"まっちゃ",romaji:"Matcha",arti:"Teh Matcha"},
+{jp:"ミルク",romaji:"Miruku",arti:"Susu"},
+{jp:"ぎゅうにゅう",romaji:"Gyuuunyuu",arti:"Susu Sapi"},
+{jp:"コーヒー",romaji:"Koohii",arti:"Kopi"},
+{jp:"アイスコーヒー",romaji:"Aisu Koohii",arti:"Es Kopi"},
+{jp:"カフェラテ",romaji:"Cafe Latte",arti:"Cafe Latte"},
+{jp:"エスプレッソ",romaji:"Esupuresso",arti:"Espresso"},
+{jp:"ジュース",romaji:"Juusu",arti:"Jus"},
+{jp:"オレンジジュース",romaji:"Orenji Juusu",arti:"Jus Jeruk"},
+{jp:"りんごジュース",romaji:"Ringo Juusu",arti:"Jus Apel"},
+{jp:"ぶどうジュース",romaji:"Budou Juusu",arti:"Jus Anggur"},
+{jp:"トマトジュース",romaji:"Tomato Juusu",arti:"Jus Tomat"},
+{jp:"レモンジュース",romaji:"Remon Juusu",arti:"Jus Lemon"},
+{jp:"パイナップルジュース",romaji:"Painappuru Juusu",arti:"Jus Nanas"},
+{jp:"マンゴージュース",romaji:"Mangoo Juusu",arti:"Jus Mangga"},
+{jp:"スムージー",romaji:"Sumuujii",arti:"Smoothie"},
+{jp:"コーラ",romaji:"Koora",arti:"Cola"},
+{jp:"サイダー",romaji:"Saidaa",arti:"Minuman Bersoda"},
+{jp:"ソーダ",romaji:"Sooda",arti:"Soda"},
+{jp:"ラムネ",romaji:"Ramune",arti:"Ramune"},
+{jp:"スポーツドリンク",romaji:"Supootsu Dorinku",arti:"Minuman Isotonik"},
+{jp:"エナジードリンク",romaji:"Enajii Dorinku",arti:"Minuman Energi"},
+{jp:"ヨーグルトドリンク",romaji:"Yooguruto Dorinku",arti:"Minuman Yogurt"},
+{jp:"ココア",romaji:"Kokoa",arti:"Cokelat Panas"},
+{jp:"ホットチョコレート",romaji:"Hotto Chokoreeto",arti:"Hot Chocolate"},
+{jp:"シェイク",romaji:"Sheiku",arti:"Milkshake"},
+{jp:"バナナシェイク",romaji:"Banana Sheiku",arti:"Milkshake Pisang"},
+{jp:"いちごシェイク",romaji:"Ichigo Sheiku",arti:"Milkshake Stroberi"},
+{jp:"ミネラルウォーター",romaji:"Mineraru Wootaa",arti:"Air Mineral"},
+{jp:"たんさんすい",romaji:"Tansansui",arti:"Air Soda"},
+{jp:"ココナッツウォーター",romaji:"Kokonattsu Wootaa",arti:"Air Kelapa"},
+{jp:"あまざけ",romaji:"Amazake",arti:"Minuman Beras Manis"},
+{jp:"みそしる",romaji:"Misoshiru",arti:"Sup Miso"},
+{jp:"コンソメスープ",romaji:"Konsome Suupu",arti:"Sup Konsome"},
+{jp:"コーンスープ",romaji:"Koon Suupu",arti:"Sup Jagung"},
+{jp:"トマトスープ",romaji:"Tomato Suupu",arti:"Sup Tomat"},
+{jp:"やさいジュース",romaji:"Yasai Juusu",arti:"Jus Sayuran"},
+{jp:"メロンソーダ",romaji:"Meron Sooda",arti:"Melon Soda"},
+{jp:"カルピス",romaji:"Karupisu",arti:"Calpis"},
+{jp:"ほうじちゃ",romaji:"Houjicha",arti:"Teh Hojicha"},
+{jp:"むぎちゃ",romaji:"Mugicha",arti:"Teh Barley"},
+{jp:"ウーロンちゃ",romaji:"Uuroncha",arti:"Teh Oolong"},
+{jp:"げんまいちゃ",romaji:"Genmaicha",arti:"Teh Beras Panggang"},
+{jp:"ハーブティー",romaji:"Haabu Tii",arti:"Teh Herbal"}
+
+]
+
+};
