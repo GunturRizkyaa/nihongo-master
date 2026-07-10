@@ -1,175 +1,352 @@
-const hiragana = [
+const hiraganaQuiz = [
 
 {
-id:"a",
-kana:"あ",
-romaji:"A",
-arti:"Dibaca A",
-contoh:[
-{jp:"あさ",romaji:"Asa",arti:"Pagi"},
-{jp:"あめ",romaji:"Ame",arti:"Hujan"},
-{jp:"あか",romaji:"Aka",arti:"Merah"}
-]
+question:"あ",
+text:"Huruf apakah ini?",
+correct:"a",
+options:["a","i","u","e"]
 },
 
 {
-id:"i",
-kana:"い",
-romaji:"I",
-arti:"Dibaca I",
-contoh:[
-{jp:"いぬ",romaji:"Inu",arti:"Anjing"},
-{jp:"いえ",romaji:"Ie",arti:"Rumah"},
-{jp:"いし",romaji:"Ishi",arti:"Batu"}
-]
+question:"い",
+text:"Huruf apakah ini?",
+correct:"i",
+options:["i","e","o","u"]
 },
 
 {
-id:"u",
-kana:"う",
-romaji:"U",
-arti:"Dibaca U",
-contoh:[
-{jp:"うみ",romaji:"Umi",arti:"Laut"},
-{jp:"うた",romaji:"Uta",arti:"Lagu"},
-{jp:"うし",romaji:"Ushi",arti:"Sapi"}
-]
+question:"う",
+text:"Huruf apakah ini?",
+correct:"u",
+options:["u","o","i","a"]
 },
 
 {
-id:"e",
-kana:"え",
-romaji:"E",
-arti:"Dibaca E",
-contoh:[
-{jp:"えき",romaji:"Eki",arti:"Stasiun"},
-{jp:"え",romaji:"E",arti:"Gambar"},
-{jp:"えん",romaji:"En",arti:"Yen"}
-]
+question:"え",
+text:"Huruf apakah ini?",
+correct:"e",
+options:["e","a","o","i"]
 },
 
 {
-id:"o",
-kana:"お",
-romaji:"O",
-arti:"Dibaca O",
-contoh:[
-{jp:"おちゃ",romaji:"Ocha",arti:"Teh"},
-{jp:"おとこ",romaji:"Otoko",arti:"Laki-laki"},
-{jp:"おんな",romaji:"Onna",arti:"Perempuan"}
-]
+question:"お",
+text:"Huruf apakah ini?",
+correct:"o",
+options:["o","u","a","e"]
 },
 
 {
-id:"ka",
-kana:"か",
-romaji:"KA",
-arti:"Dibaca KA",
-contoh:[
-{jp:"かさ",romaji:"Kasa",arti:"Payung"},
-{jp:"かみ",romaji:"Kami",arti:"Kertas"},
-{jp:"かわ",romaji:"Kawa",arti:"Sungai"}
-]
+question:"か",
+text:"Huruf apakah ini?",
+correct:"ka",
+options:["ka","ki","ku","ke"]
 },
 
 {
-id:"ki",
-kana:"き",
-romaji:"KI",
-arti:"Dibaca KI",
-contoh:[
-{jp:"き",romaji:"Ki",arti:"Pohon"},
-{jp:"きた",romaji:"Kita",arti:"Utara"},
-{jp:"きょう",romaji:"Kyou",arti:"Hari ini"}
-]
+question:"き",
+text:"Huruf apakah ini?",
+correct:"ki",
+options:["ki","ka","ku","ko"]
 },
 
 {
-id:"ku",
-kana:"く",
-romaji:"KU",
-arti:"Dibaca KU",
-contoh:[
-{jp:"くるま",romaji:"Kuruma",arti:"Mobil"},
-{jp:"くち",romaji:"Kuchi",arti:"Mulut"},
-{jp:"くも",romaji:"Kumo",arti:"Awan"}
-]
+question:"く",
+text:"Huruf apakah ini?",
+correct:"ku",
+options:["ku","ka","ki","ke"]
 },
 
 {
-id:"ke",
-kana:"け",
-romaji:"KE",
-arti:"Dibaca KE",
-contoh:[
-{jp:"けさ",romaji:"Kesa",arti:"Tadi pagi"},
-{jp:"けむり",romaji:"Kemuri",arti:"Asap"},
-{jp:"けん",romaji:"Ken",arti:"Pedang"}
-]
+question:"け",
+text:"Huruf apakah ini?",
+correct:"ke",
+options:["ke","ka","ki","ko"]
 },
 
 {
-id:"ko",
-kana:"こ",
-romaji:"KO",
-arti:"Dibaca KO",
-contoh:[
-{jp:"こども",romaji:"Kodomo",arti:"Anak"},
-{jp:"こえ",romaji:"Koe",arti:"Suara"},
-{jp:"こねこ",romaji:"Koneko",arti:"Anak kucing"}
-]
+question:"こ",
+text:"Huruf apakah ini?",
+correct:"ko",
+options:["ko","ka","ki","ku"]
 },
 
-// SA
-{id:"sa",kana:"さ",romaji:"SA",arti:"Dibaca SA",contoh:[]},
-{id:"shi",kana:"し",romaji:"SHI",arti:"Dibaca SHI",contoh:[]},
-{id:"su",kana:"す",romaji:"SU",arti:"Dibaca SU",contoh:[]},
-{id:"se",kana:"せ",romaji:"SE",arti:"Dibaca SE",contoh:[]},
-{id:"so",kana:"そ",romaji:"SO",arti:"Dibaca SO",contoh:[]},
+{
+question:"さ",
+text:"Huruf apakah ini?",
+correct:"sa",
+options:["sa","shi","su","se"]
+},
 
-// TA
-{id:"ta",kana:"た",romaji:"TA",arti:"Dibaca TA",contoh:[]},
-{id:"chi",kana:"ち",romaji:"CHI",arti:"Dibaca CHI",contoh:[]},
-{id:"tsu",kana:"つ",romaji:"TSU",arti:"Dibaca TSU",contoh:[]},
-{id:"te",kana:"て",romaji:"TE",arti:"Dibaca TE",contoh:[]},
-{id:"to",kana:"と",romaji:"TO",arti:"Dibaca TO",contoh:[]},
+{
+question:"し",
+text:"Huruf apakah ini?",
+correct:"shi",
+options:["shi","sa","su","so"]
+},
 
-// NA
-{id:"na",kana:"な",romaji:"NA",arti:"Dibaca NA",contoh:[]},
-{id:"ni",kana:"に",romaji:"NI",arti:"Dibaca NI",contoh:[]},
-{id:"nu",kana:"ぬ",romaji:"NU",arti:"Dibaca NU",contoh:[]},
-{id:"ne",kana:"ね",romaji:"NE",arti:"Dibaca NE",contoh:[]},
-{id:"no",kana:"の",romaji:"NO",arti:"Dibaca NO",contoh:[]},
+{
+question:"す",
+text:"Huruf apakah ini?",
+correct:"su",
+options:["su","sa","shi","se"]
+},
 
-// HA
-{id:"ha",kana:"は",romaji:"HA",arti:"Dibaca HA",contoh:[]},
-{id:"hi",kana:"ひ",romaji:"HI",arti:"Dibaca HI",contoh:[]},
-{id:"fu",kana:"ふ",romaji:"FU",arti:"Dibaca FU",contoh:[]},
-{id:"he",kana:"へ",romaji:"HE",arti:"Dibaca HE",contoh:[]},
-{id:"ho",kana:"ほ",romaji:"HO",arti:"Dibaca HO",contoh:[]},
+{
+question:"せ",
+text:"Huruf apakah ini?",
+correct:"se",
+options:["se","sa","shi","so"]
+},
 
-// MA
-{id:"ma",kana:"ま",romaji:"MA",arti:"Dibaca MA",contoh:[]},
-{id:"mi",kana:"み",romaji:"MI",arti:"Dibaca MI",contoh:[]},
-{id:"mu",kana:"む",romaji:"MU",arti:"Dibaca MU",contoh:[]},
-{id:"me",kana:"め",romaji:"ME",arti:"Dibaca ME",contoh:[]},
-{id:"mo",kana:"も",romaji:"MO",arti:"Dibaca MO",contoh:[]},
+{
+question:"そ",
+text:"Huruf apakah ini?",
+correct:"so",
+options:["so","sa","shi","su"]
+},
 
-// YA
-{id:"ya",kana:"や",romaji:"YA",arti:"Dibaca YA",contoh:[]},
-{id:"yu",kana:"ゆ",romaji:"YU",arti:"Dibaca YU",contoh:[]},
-{id:"yo",kana:"よ",romaji:"YO",arti:"Dibaca YO",contoh:[]},
+{
+question:"た",
+text:"Huruf apakah ini?",
+correct:"ta",
+options:["ta","chi","tsu","te"]
+},
 
-// RA
-{id:"ra",kana:"ら",romaji:"RA",arti:"Dibaca RA",contoh:[]},
-{id:"ri",kana:"り",romaji:"RI",arti:"Dibaca RI",contoh:[]},
-{id:"ru",kana:"る",romaji:"RU",arti:"Dibaca RU",contoh:[]},
-{id:"re",kana:"れ",romaji:"RE",arti:"Dibaca RE",contoh:[]},
-{id:"ro",kana:"ろ",romaji:"RO",arti:"Dibaca RO",contoh:[]},
+{
+question:"ち",
+text:"Huruf apakah ini?",
+correct:"chi",
+options:["chi","ta","tsu","to"]
+},
 
-// WA
-{id:"wa",kana:"わ",romaji:"WA",arti:"Dibaca WA",contoh:[]},
-{id:"wo",kana:"を",romaji:"WO",arti:"Dibaca WO",contoh:[]},
-{id:"n",kana:"ん",romaji:"N",arti:"Dibaca N",contoh:[]}
+{
+question:"つ",
+text:"Huruf apakah ini?",
+correct:"tsu",
+options:["tsu","ta","chi","te"]
+},
 
+{
+question:"て",
+text:"Huruf apakah ini?",
+correct:"te",
+options:["te","ta","chi","to"]
+},
+
+{
+question:"と",
+text:"Huruf apakah ini?",
+correct:"to",
+options:["to","ta","chi","tsu"]
+},
+
+{
+question:"な",
+text:"Huruf apakah ini?",
+correct:"na",
+options:["na","ni","nu","ne"]
+},
+
+{
+question:"に",
+text:"Huruf apakah ini?",
+correct:"ni",
+options:["ni","na","nu","no"]
+},
+
+{
+question:"ぬ",
+text:"Huruf apakah ini?",
+correct:"nu",
+options:["nu","na","ni","ne"]
+},
+
+{
+question:"ね",
+text:"Huruf apakah ini?",
+correct:"ne",
+options:["ne","na","ni","no"]
+},
+
+{
+question:"の",
+text:"Huruf apakah ini?",
+correct:"no",
+options:["no","na","ni","nu"]
+},
+
+{
+question:"は",
+text:"Huruf apakah ini?",
+correct:"ha",
+options:["ha","hi","fu","he"]
+},
+
+{
+question:"ひ",
+text:"Huruf apakah ini?",
+correct:"hi",
+options:["hi","ha","fu","ho"]
+},
+
+{
+question:"ふ",
+text:"Huruf apakah ini?",
+correct:"fu",
+options:["fu","ha","hi","he"]
+},
+
+{
+question:"へ",
+text:"Huruf apakah ini?",
+correct:"he",
+options:["he","ha","hi","ho"]
+},
+
+{
+question:"ほ",
+text:"Huruf apakah ini?",
+correct:"ho",
+options:["ho","ha","hi","fu"]
+},
+
+{
+question:"ま",
+text:"Huruf apakah ini?",
+correct:"ma",
+options:["ma","mi","mu","me"]
+},
+
+{
+question:"み",
+text:"Huruf apakah ini?",
+correct:"mi",
+options:["mi","ma","mu","mo"]
+},
+
+{
+question:"む",
+text:"Huruf apakah ini?",
+correct:"mu",
+options:["mu","ma","mi","me"]
+},
+
+{
+question:"め",
+text:"Huruf apakah ini?",
+correct:"me",
+options:["me","ma","mi","mo"]
+},
+
+{
+question:"も",
+text:"Huruf apakah ini?",
+correct:"mo",
+options:["mo","ma","mi","mu"]
+},
+
+{
+question:"や",
+text:"Huruf apakah ini?",
+correct:"ya",
+options:["ya","yu","yo","ra"]
+},
+
+{
+question:"ゆ",
+text:"Huruf apakah ini?",
+correct:"yu",
+options:["yu","ya","yo","wa"]
+},
+
+{
+question:"よ",
+text:"Huruf apakah ini?",
+correct:"yo",
+options:["yo","ya","yu","wo"]
+},
+
+{
+question:"ら",
+text:"Huruf apakah ini?",
+correct:"ra",
+options:["ra","ri","ru","re"]
+},
+
+{
+question:"り",
+text:"Huruf apakah ini?",
+correct:"ri",
+options:["ri","ra","ru","ro"]
+},
+
+{
+question:"る",
+text:"Huruf apakah ini?",
+correct:"ru",
+options:["ru","ra","ri","re"]
+},
+
+{
+question:"れ",
+text:"Huruf apakah ini?",
+correct:"re",
+options:["re","ra","ri","ro"]
+},
+
+{
+question:"ろ",
+text:"Huruf apakah ini?",
+correct:"ro",
+options:["ro","ra","ri","ru"]
+},
+
+{
+question:"わ",
+text:"Huruf apakah ini?",
+correct:"wa",
+options:["wa","wo","n","ya"]
+},
+
+{
+question:"を",
+text:"Huruf apakah ini?",
+correct:"wo",
+options:["wo","wa","n","yo"]
+},
+
+{
+question:"ん",
+text:"Huruf apakah ini?",
+correct:"n",
+options:["n","na","nu","wa"]
+},
+
+{
+question:"Romaji 'a' ditulis dengan huruf...",
+text:"Pilih Hiragana yang benar",
+correct:"あ",
+options:["あ","い","う","え"]
+},
+
+{
+question:"Romaji 'ki' ditulis dengan huruf...",
+text:"Pilih Hiragana yang benar",
+correct:"き",
+options:["き","か","く","け"]
+},
+
+{
+question:"Romaji 'su' ditulis dengan huruf...",
+text:"Pilih Hiragana yang benar",
+correct:"す",
+options:["す","さ","せ","そ"]
+},
+
+{
+question:"Romaji 'ne' ditulis dengan huruf...",
+text:"Pilih Hiragana yang benar",
+correct:"ね",
+options:["ね","ぬ","に","の"]
+}
 ];

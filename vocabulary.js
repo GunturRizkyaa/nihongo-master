@@ -1,75 +1,39 @@
-const vocabulary=[
+const vocabularyQuiz = [
 
 {
-
-id:"angka",
-
-nama:"Angka",
-
-data:[
-
-{
-jp:"いち",
-romaji:"Ichi",
-arti:"Satu"
-},
-
-{
-jp:"に",
-romaji:"Ni",
-arti:"Dua"
-},
-
-{
-jp:"さん",
-romaji:"San",
-arti:"Tiga"
-},
-
-{
-jp:"よん",
-romaji:"Yon",
-arti:"Empat"
-},
-
-{
-jp:"ご",
-romaji:"Go",
-arti:"Lima"
-}
-
+question:"ねこ",
+text:"Apa arti kata berikut?",
+correct:"Kucing",
+options:[
+"Kucing",
+"Anjing",
+"Burung",
+"Ikan"
 ]
-
 },
 
 {
-
-id:"warna",
-
-nama:"Warna",
-
-data:[
-
-{
-jp:"あか",
-romaji:"Aka",
-arti:"Merah"
-},
-
-{
-jp:"あお",
-romaji:"Ao",
-arti:"Biru"
-},
-
-{
-jp:"しろ",
-romaji:"Shiro",
-arti:"Putih"
-}
-
+question:"いぬ",
+text:"Apa arti kata berikut?",
+correct:"Anjing",
+options:[
+"Kucing",
+"Anjing",
+"Kelinci",
+"Sapi"
 ]
+},
 
+{
+question:"りんご",
+text:"Apa arti kata berikut?",
+correct:"Apel",
+options:[
+"Jeruk",
+"Apel",
+"Anggur",
+"Melon"
+]
 }
 
 ];
